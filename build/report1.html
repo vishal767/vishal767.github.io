@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Pragyaam</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:500,400');
+    .row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+    #logoimg {
+      margin-top: 8%;
+      margin-left: 12%;
+    }
+
+    #Com_name {
+      margin-top: 1.5%;
+      font-family: 'Roboto';
+      color: #019966;
+      font-size: 1.25em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    #logout {
+      margin-top: 7%;
+      margin-left: 50%;
+    }
+
+    #logoutimg {
+      margin-left: 1%;
+    }
+    #layer{
+          margin: 6%;
+    }
+    #sidebar{
+
+      background:#000000;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+width: 140px;
+
+text-align: center;
+    }
+    #sidebar > img{
+      margin-top:22%;
+    }
+    /* #line2{
+      margin-left: 19%;
+
+    }
+    #text1{
+      margin-left: 27%;
+
+    }
+    #downarrow{
+      margin-left: 40%;
+    } */
+    #sidetext{
+      font-family: Roboto;
+color:  #1f1d1d;
+font-size: 1.241em;/* Approximation due to font substitution */
+font-weight: 500;
+text-align: center;
+transform: scaleY(1.0071);
+    }#col-main1{
+
+    }
+    .col-md-10{
+      width:100%;
+    }
+    #col-main{
+      background-color:  #ffffff;
+box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+margin-top: 1%;
+margin-left: 4%;
+
+
+overflow-x:scroll;
+
+    }
+    /* table {
+  border-collapse: collapse;
+}
+table td, table th {
+  border: 1px solid black;
+}
+table tr:first-child td
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+} */
+table { border-collapse: collapse; }
+
+td,
+th { padding: 8px; }
+
+
+// IE7
+tr + tr > td,
+tr + tr > th { border-top: 1px solid indigo; }
+    #col-head{
+      height: 64px;
+      background:#ebebeb;
+      position:sticky;
+      top:0;
+      font-family: Roboto;
+color:  #019966;
+font-size: 1.275em;/* Approximation due to font substitution */
+font-weight: 400;
+text-align: center;
+    }
+    #celltext{
+      border-radius: 3px;
+border-width: 1px;
+border-color:  #b3b3b3;
+border-style: solid;
+width: 108px;
+height: 31px;
+margin-bottom: 0;
+    }
+    #spreadplus{
+          margin-left: 42%;
+    }
+    #root{
+      padding-top:20%;
+      padding-bottom:20%;
+    }
+    #endbutton{
+      width: 195px;
+height: 51px;
+border-radius: 31px;
+background: #4b9966;
+color: white;
+font-size: 27px;
+margin-left: 27%;
+margin-top:4%;
+margin-bottom:2%;
+
+    }
+    #endbutton2{
+      width: 195px;
+height: 51px;
+border-radius: 31px;
+background: #4b9966;
+color: white;
+font-size: 27px;
+margin-left: 7%;
+margin-top:4%;
+margin-bottom:2%;
+
+    }
+    #endbutton5{
+
+      border-radius: 5px;
+  background-color:  #019966;
+  width: 158px;
+  height: 42px;
+font-family: Roboto;
+color:  #ffffff;
+font-size: 1.319em;/* Approximation due to font substitution */
+font-weight: 300;
+text-align: center;
+transform: scaleY(1.006);
+padding-top:10px;
+text-transform: uppercase;
+text-align: center;
+  margin-right: -6em;
+margin-top:2%;
+/* margin-left: 27%;
+margin-top:4%;
+margin-bottom:2%; */
+
+    }
+    #dashboard{
+      background-color:  #ffffff;
+box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+width: 292px;
+height: 52px;
+text-transform:uppercase;
+padding-top: 15px;
+text-align:center;
+margin-left: 7%;
+margin-top: 3%;
+    }
+    .centered {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform:uppercase;
+        font-family: Roboto;
+        color:  #ffffff;
+        font-size: 1.125em;/* Approximation due to font substitution */
+        font-weight: 300;
+        text-align: center;
+    }
+    #report-text{
+      font-family: Roboto;
+color:  #1e1d1d;
+font-size: 1.375em;/* Approximation due to font substitution */
+font-weight: 400;
+text-align: left;
+text-transform: uppercase;
+    margin-left: 12%;
+    margin-top:2%;
+
+    }
+    .subtext{
+      display:none;
+
+    }
+    #subtext1,#subtext2{
+
+  color: #019966;
+  margin-top:5%;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  /* Text style for "S, ub Tabl" */
+
+    }
+    #subtext01,#subtext02{
+      display:none;
+    }
+    #subtext001{
+
+  color: #019966;
+  margin-top:5%;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /* Text style for "S, ub Tabl" */
+
+    }
+
+  </style>
+
+
+</head>
+
+<body id="app">
+  <div class="container-fluid">
+    <div class="header">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="images/pragyaam-outline-white.png" id="logoimg" alt="logo">
+        </div>
+        <div class="col-md-2" id="Com_name">
+          Company Name
+        </div>
+        <div class="col-md-3 col-md-offset-5">
+          <div id="logout">
+            <img src="images/log-out.png" id="logoutimg1" alt="logo">
+            <img src="images/logout.png" id="logoutimg" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-eq-height">
+      <div class="col-md-2" id="sidebar">
+
+        <img src="images/SALES.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow-sales" alt="downarrow">
+        <br/>
+        <div class="subtext">
+                <div id="subtext1">Sub table 1<img src="images/small-down-arrow.png" id="downarrow" alt="downarrow"></div>
+                <div id="subtext01" ><a href="/entrypage.html" id="subtext001">view &nbsp&nbsp</a><a href="/index.html" id="subtext001">edit</a></div>
+                  <div id="subtext2">Sub table 2<img src="images/small-down-arrow.png" id="downarrow" alt="downarrow"></div>
+                    <div id="subtext02"><a href="/entrypage.html" id="subtext001">view &nbsp&nbsp</a><a href="/index.html" id="subtext001">edit</a></div>
+                  </div>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+        <img src="images/PURCHASE.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow">
+        <br/>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+        <img src="images/CUSTOMERS.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow">
+        <br/>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+        <img src="images/TANKOPS.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow">
+        <br/>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+        <img src="images/PIPEOPS.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow">
+        <br/>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+        <img src="images/PAYMENT.png" id="text1" alt="sales">
+        <br/>
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow">
+        <br/>
+        <img src="images/line1.png" id="line2" alt="shadowline">
+        <br />
+      </div>
+      <div  id="col-md-10" style="width:100%;min-height:100vh">
+<div class="row">
+  <a href="/dashboard.html" style="color:black;"><div class="col-xs-3" id="dashboard" style="color:black;">
+    Dashboard
+  </div>
+</a>
+  <div class="col-xs-3" id="report">
+    <img src="images/dash-highlight.png" alt="target" style="width:100%;margin-top: 10%;"/>
+    <div class="centered">Report</span>
+  </div>
+</div>
+
+    </div>
+    <!-- <div class="row" style="margin-top:5%;">
+      <div class="col-md-6" >
+      <div id="report-text">  Dashboard</div>
+      <div id="report-text">  Dashboard</div>
+      <div id="report-text">  Dashboard</div>
+      </div>
+      <div class="col-md-6" >
+
+        <div id="endbutton5">Report</div>
+        <div id="endbutton5">Report</div>
+        <div id="endbutton5">Report</div>
+      </div>
+    </div> -->
+    <table style="width:100%">
+      <tr>
+        <td><div id="report-text">  Report 1</div></td>
+        <td>  <div id="endbutton5">Report</div></td>
+      </tr>
+      <tr>
+        <td><div id="report-text">  Report 2</div></td>
+        <td>  <div id="endbutton5">Report</div></td>
+      </tr>
+      <tr>
+        <td><div id="report-text">  Report 3</div></td>
+        <td>  <div id="endbutton5">Report</div></td>
+      </tr>
+    </table>
+
+        </div>
+</div>
+
+
+
+  </div>
+</body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+console.log("toggle");
+    $('#downarrow-sales').click(function(){
+      $('.subtext').slideToggle('hidden');
+      //$('#subtext2').slideToggle('hidden');
+
+       //swaps the display:none between the two spans
+      //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+      console.log("toggle");
+  });
+  $('#subtext1').click(function(){
+    $('#subtext01').slideToggle('hidden1');
+  //  $('#subtext2').slideToggle('hidden');  //swaps the display:none between the two spans
+    //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+    console.log("toggle");
+});
+$('#subtext2').click(function(){
+  $('#subtext02').slideToggle('hidden1');
+//  $('#subtext1').slideToggle('hidden');
+   //swaps the display:none between the two spans
+  //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+  console.log("toggle");
+});
+
+});
+
+
+</script>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Pragyaam</title>
+
+  <style>
+  @font-face {
+    font-family: "Avenir - Roman";
+    font-weight: 100;
+    src: url("images/Avenir-Roman.otf") format("opentype");
+}
+    @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,500,400');
+    .row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  }
+    #logoimg {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    #Com_name {
+      margin-top: 1.5%;
+      font-family: 'Roboto';
+      color: #019966;
+      font-size: 1.25em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    #logout {
+      margin-top: 7%;
+      margin-left: 50%;
+    }
+
+    #logoutimg {
+      margin-left: 1%;
+    }
+    #layer{
+          margin: 6%;
+    }
+    #sidebar{
+
+      background:#1e1d1d;
+
+
+padding-left:3%;
+padding-right:3%;
+
+text-align: center;
+    }
+    #sidebar > img{
+
+    }
+    #downarrow{
+        display:inline-block;
+    }
+    /* #line2{
+      margin-left: 19%;
+
+    }
+    #text1{
+      margin-left: 27%;
+
+    }
+    #downarrow{
+      margin-left: 40%;
+    } */
+    #sidetext{
+      font-family: Roboto;
+  color:  #1f1d1d;
+  font-size: 1.241em;/* Approximation due to font substitution */
+  font-weight: 500;
+  text-align: center;
+    }#col-main1{
+
+    }
+    .col-md-10{
+      width:100%;
+    }
+    #col-main{
+      background-color:  #ffffff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 1%;
+  margin-left: 4%;
+
+
+  overflow-x:scroll;
+
+    }
+    /* table {
+  border-collapse: collapse;
+  }
+  table td, table th {
+  border: 1px solid black;
+  }
+  table tr:first-child td
+  table tr:first-child th {
+  border-top: 0;
+  }
+  table tr:last-child td {
+  border-bottom: 0;
+  }
+  table tr td:first-child,
+  table tr th:first-child {
+  border-left: 0;
+  }
+  table tr td:last-child,
+  table tr th:last-child {
+  border-right: 0;
+  } */
+  table { border-collapse: collapse; }
+
+  td,
+  th { padding: 8px; }
+
+
+  // IE7
+  tr + tr > td,
+  tr + tr > th { border-top: 1px solid indigo; }
+    #col-head{
+      height: 64px;
+      background:#ebebeb;
+      position:sticky;
+      top:0;
+      font-family: Roboto;
+  color:  #019966;
+  font-size: 1.275em;/* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: center;
+    }
+    #celltext{
+      border-radius: 3px;
+  border-width: 1px;
+  border-color:  #b3b3b3;
+  border-style: solid;
+  width: 108px;
+  height: 31px;
+  margin-bottom: 0;
+    }
+    #spreadplus{
+          margin-left: 42%;
+    }
+    #root{
+      padding-top:20%;
+      padding-bottom:20%;
+    }
+    #endbutton{
+      width: 195px;
+  height: 51px;
+  border-radius: 31px;
+  background: #4b9966;
+  color: white;
+  font-size: 27px;
+  margin-left: 27%;
+  margin-top:4%;
+  margin-bottom:2%;
+
+    }
+    #endbutton2{
+      width: 195px;
+  height: 51px;
+  border-radius: 31px;
+  background: #4b9966;
+  color: white;
+  font-size: 27px;
+  margin-left: 7%;
+  margin-top:4%;
+  margin-bottom:2%;
+
+    }
+    #endbutton5{
+
+      border-radius: 5px;
+  background-color:  #019966;
+  width: 158px;
+  height: 42px;
+  font-family: Roboto;
+  color:  #ffffff;
+  font-size: 1.319em;/* Approximation due to font substitution */
+  font-weight: 300;
+  text-align: center;
+  transform: scaleY(1.006);
+  padding-top:10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-right: -6em;
+  margin-top:2%;
+  /* margin-left: 27%;
+  margin-top:4%;
+  margin-bottom:2%; */
+
+    }
+    #endbutton6{
+      width: 195px;
+  height: 51px;
+  border-radius: 31px;
+
+background-color: #1e1d1d;
+
+  color: white;
+  font-size: 27px;
+font-family: "Avenir - Roman";
+color: #ffffff;
+font-size: 0.575em;/* Approximation due to font substitution */
+font-weight: 300;
+text-align: center;
+margin:10px;
+text-transform: uppercase;
+
+
+    }
+    #dashboard{
+
+background-color:  #8b8883;
+  box-shadow: 15px 0px 15px 0px rgba(0, 0, 0, 0.25);
+margin:0%;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align:center;
+  color: #000000;
+font-family: "Avenir - Roman";
+font-size: 22px;
+font-weight: 400;
+text-transform: uppercase;
+
+
+    }
+    #report{
+      margin-left:0%;
+    }
+    .centered {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform:uppercase;
+        font-family: Roboto;
+        color:  #ffffff;
+        font-size: 1.125em;/* Approximation due to font substitution */
+        font-weight: 300;
+        text-align: center;
+    }
+    #report-text{
+      font-family: Roboto;
+  color:  #1e1d1d;
+  font-size: 1.375em;/* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+    margin-left: 12%;
+    margin-top:2%;
+
+    }
+    #dashboard-box{
+      background-color:  #ffffff;
+box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    width: 95%;
+
+    margin-top: 5%;
+    }
+    .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+    margin-left: 5%;
+
+}
+.grid-item {
+
+
+
+  font-size: 30px;
+  text-align: center;
+}
+#dashboard-image{
+  width:100%;
+}
+#dashboard-header{
+
+color:  #1f1d1d;
+font-size: 1.00em;/* Approximation due to font substitution */
+font-weight: 350;
+text-align: center;
+    padding: 10px;
+
+}
+.subtext{
+  display:none;
+
+}
+#subtext1,#subtext2{
+
+  color: #019966;
+  margin-top:5%;
+  color: #ffffff;
+  font-family: "Avenir - Roman";
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+/* Text style for "S, ub Tabl" */
+
+}
+#subtext01,#subtext02{
+  display:none;
+}
+#subtext001{
+  color: #019966;
+  margin-top:5%;
+  color: #ffffff;
+  font-family: "Avenir - Roman";
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+/* Text style for "S, ub Tabl" */
+
+}
+#text1{
+margin-bottom: 50px;
+  color: #ffffff;
+font-family: "Avenir - Roman";
+font-size: 20px;
+font-weight: 100;
+text-transform: uppercase;
+
+
+}
+
+#dashboard-report{
+  background-color:  #8b8883;
+  margin:0;
+}
+#dashboard-report > .col-md-6{
+  padding:0;
+
+}
+.dashboard-highlight{
+  height: 5px;
+  width:100%;
+  background: #4c9a67;
+}
+#Com_name {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  margin-left:40px;;
+  color: #1e1d1d;
+font-family: "Avenir - Roman";
+font-size: 22px;
+font-weight: 400;
+text-transform: uppercase;
+}
+  #com_name1{
+    color: #1e1d1d;
+font-family: "Avenir - Roman";
+font-size: 22px;
+font-weight: 400;
+text-transform: uppercase;
+    display: inline-block;
+    text-align: right;
+    margin-right:10%;
+
+  }
+#com_name2{
+  color: #1e1d1d;
+font-family: "Avenir - Roman";
+font-size: 22px;
+font-weight: 400;
+text-transform: uppercase;
+  display: inline-block;
+  text-align: right;
+}
+a,a:hover{
+  text-decoration: none;
+}
+
+  </style>
+
+
+
+</head>
+
+<body id="app">
+  <div class="container-fluid">
+    <!-- <div class="header">
+      <div class="row">
+        <div class="col-md-2">
+          <img src="images/pragyaam-outline-white.png" id="logoimg" alt="logo">
+        </div>
+        <div class="col-md-2" id="Com_name">
+          Company Name
+        </div>
+        <div class="col-md-3 col-md-offset-5">
+          <div id="logout">
+            <img src="images/log-out.png" id="logoutimg1" alt="logo">
+            <img src="images/logout.png" id="logoutimg" alt="logo">
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="row row-eq-height">
+      <div class="col-md-2" id="sidebar">
+          <a href="/dashboard.html" ><img src="images/pragyaam-outline-white.png" id="logoimg" alt="logo" ></a>
+
+        <div id="text1" alt="sales">Sales
+
+        <img src="images/downarrow.png" id="downarrow-sales" alt="downarrow">
+        <br/>
+<div class="subtext">
+        <div id="subtext1">Sub table 1<img src="images/small-down-arrow.png" id="downarrow" alt="downarrow"></div>
+        <div id="subtext01" ><a href="/entrypage.html" id="subtext001">view &nbsp&nbsp</a><a href="/index.html" id="subtext001">edit</a></div>
+          <div id="subtext2">Sub table 2<img src="images/small-down-arrow.png" id="downarrow" alt="downarrow"></div>
+            <div id="subtext02"><a href="/entrypage.html" id="subtext001">view &nbsp&nbsp</a><a href="/index.html" id="subtext001">edit</a></div>
+          </div>
+          </div>
+
+
+
+        <div id="text1" alt="sales" >Purchase
+
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow"></div>
+        <br/>
+
+        <div id="text1" alt="sales">Customers
+
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow"></div>
+        <br/>
+
+        <div id="text1" alt="sales">Tank Tops
+
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow"></div>
+        <br/>
+
+        <div id="text1" alt="sales">Pipeops
+
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow"></div>
+        <br/>
+
+        <div id="text1" alt="sales">Payments
+
+        <img src="images/downarrow.png" id="downarrow" alt="downarrow"></div>
+        <br/>
+
+      </div>
+      <div  id="col-md-10" style="width:100%;min-height:100vh;margin-bottom:10%;">
+        <div class="row row-eq" style="margin:22px auto;width:90%" >
+          <div class="col-md-3">
+        <div id="Com_name" >Company Name
+        </div></div>
+        <div class="col-md-6 col-md-offset-3" align="right">
+
+        <div id="com_name2">Logout &nbsp;<img src="images/logout.png"/></div>
+      </div>
+      </div>
+        <div class="row row-eq-height" id="dashboard-report">
+
+          <div class="col-md-6" id="report">
+            <a href="/dashboard.html"><div  id="dashboard" style="color:white;">
+              Dashboard
+            </div></a>
+            <div class="dashboard-highlight"></div>
+        </div>
+        <div class="col-md-6" >
+        <a href="/report.html" style="color:balck;"><div  id="dashboard">
+          Report
+        </div></a>
+
+      </div>
+       </div>
+
+       <div class="grid-container">
+<div class="grid-item">
+  <div id="dashboard-box">
+    <div id="dashboard-header">Purchase</div>
+    <img src="images/layer-3.png" id="dashboard-image"/>
+    <div><button id="endbutton6">View dashboard</button></div>
+  </div>
+  </div>
+  <div class="grid-item"> <div id="dashboard-box">
+     <div id="dashboard-header">Sales</div>
+     <img src="images/sales-dash.png" id="dashboard-image"/>
+     <div><button id="endbutton6">View dashboard</button></div>
+   </div></div>
+  <div class="grid-item"> <div id="dashboard-box">
+     <div id="dashboard-header">Pipe operations</div>
+     <img src="images/pipe-dash.png" id="dashboard-image"/>
+     <div><button id="endbutton6">View dashboard</button></div>
+   </div></div>
+  <div class="grid-item"> <div id="dashboard-box">
+     <div id="dashboard-header">Tank operations</div>
+     <img src="images/sales-dash.png" id="dashboard-image"/>
+     <div ><button id="endbutton6">View dashboard</button></div>
+   </div></div>
+
+</div>
+      </div>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+</body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+console.log("toggle");
+    $('#downarrow-sales').click(function(){
+      $('.subtext').slideToggle('hidden');
+      //$('#subtext2').slideToggle('hidden');
+
+       //swaps the display:none between the two spans
+      //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+      console.log("toggle");
+  });
+  $('#subtext1').click(function(){
+    $('#subtext01').slideToggle('hidden1');
+  //  $('#subtext2').slideToggle('hidden');  //swaps the display:none between the two spans
+    //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+    console.log("toggle");
+});
+$('#subtext2').click(function(){
+  $('#subtext02').slideToggle('hidden1');
+//  $('#subtext1').slideToggle('hidden');
+   //swaps the display:none between the two spans
+  //$(this).parent().parent().find('.toggled_content').slideToggle();  //swap the display of the main content with slide action
+  console.log("toggle");
+});
+
+});
+
+
+</script>
+</html>
